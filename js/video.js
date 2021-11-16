@@ -71,7 +71,7 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 // Volume
-// Change the volume based on the slider and update the volume information.
 document.querySelector('#slider').addEventListener("change", function() {
+	video.volume = (document.querySelector('#slider').value / 100)
 	document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%"
 });

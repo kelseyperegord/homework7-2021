@@ -71,7 +71,13 @@ document.querySelector("#faster").addEventListener("click", function() {
 });
 
 // Volume
+// document.querySelector('#slider').addEventListener("change", function() {
+// 	video.volume = (document.querySelector('#slider').value / 100)
+// 	document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%"
+// });
+
 document.querySelector('#slider').addEventListener("change", function() {
-	video.volume = (document.querySelector('#slider').value / 100)
-	document.querySelector('#volume').innerHTML = document.querySelector('#slider').value + "%"
+	video.volume = this.value / 100
+	document.querySelector('#volume').innerHTML = video.volume * 100 + "%"
+	console.log(video.volume)
 });
